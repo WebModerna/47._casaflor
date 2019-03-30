@@ -1,0 +1,27 @@
+header #header_nav li a
+{
+	filter: none;
+}
+#logo figure figcaption span
+{
+	color: #ededed !important;
+	font-weight: bolder;
+}
+#ir_arriba
+{
+	background: url("../img/transparent_1x1.png");
+	visibility: visible !important;
+}
+#slideshow #alt-caption
+{
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3f8f8f6', endColorstr='#b3f8f8f6',GradientType=0 );
+}
+#slideshow .navegacion a
+{
+	background: url("../img/fancybox_overlay.png");
+}
+#slideshow .navegacion a:hover,
+#slideshow .navegacion a:active
+{
+	background: url("../img/transparent_1x1.png");
+}

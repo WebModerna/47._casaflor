@@ -6,14 +6,28 @@ wp-content/backups/
 wp-content/blogs.dir/
 wp-content/cache/
 wp-content/upgrade/
-wp-content/uploads/
 wp-content/mu-plugins/
 wp-content/wp-cache-config.php
 wp-content/plugins/hello.php
 
-/.htaccess
 /license.txt
 /readme.html
 /sitemap.xml
 /sitemap.xml.gz
 
+wp-*.php
+xml*.php
+wp-admin
+wp-includes
+datos
+maqueta-casaflor
+online
+sitio_viejo
+
+wp-content/uploads/wpcf7_*
+wp-content/uploads/.htaccess
+wp-content/languages
+
+wp-content/themes/casaflor/css/lib
+wp-content/themes/casaflor/css/node_modules
+*sublime-*
