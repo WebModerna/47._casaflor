@@ -8,6 +8,9 @@
 // Login y Captcha
 require_once "includes/01._login.php";
 
+// TAbla de precios
+require_once "includes/07._tabla_precios.php";
+
 // Cargar Panel de Opciones
 if ( !function_exists( 'optionsframework_init' ) )
 {
