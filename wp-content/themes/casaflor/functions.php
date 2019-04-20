@@ -39,6 +39,13 @@ jQuery(document).ready(function()
 // Sitemap en xml
 require_once "includes/06._sitemap.php";
 
+// Agregando un favicon al área de administración
+function admin_favicon()
+{
+	echo '<link rel="shortcut icon" type="image/x-icon" href="' . get_bloginfo('stylesheet_directory') . '/img/favicon.ico" />';
+}
+add_action('admin_head', 'admin_favicon', 1);
+
 // Deshabilitar Iconos Emoji
 remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');
