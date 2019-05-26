@@ -6,7 +6,7 @@
 */
 
 // Login y Captcha
-require_once "includes/01._login.php";
+// require_once "includes/01._login.php";
 
 // TAbla de precios
 require_once "includes/07._tabla_precios.php";
@@ -51,14 +51,14 @@ remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');
 add_filter( 'emoji_svg_url', '__return_false' );
 
-// Remover la API REST
+/*// Remover la API REST
 function remove_api ()
 {
 remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
 remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10 );
 remove_action( 'template_redirect', 'rest_output_link_header', 11, 0 );
 }
-add_action( 'after_setup_theme', 'remove_api' );
+add_action( 'after_setup_theme', 'remove_api' );*/
 
 // Remover cosas raras de Wordpress
 remove_action( 'wp_head', 'wp_resource_hints', 2 );
@@ -80,13 +80,13 @@ function my_deregister_scripts()
 add_action( 'wp_footer', 'my_deregister_scripts' );
 
 // Añadiendo cabeceras de seguridad
-function add_security_headers()
+/*function add_security_headers()
 {
 	header( 'X-Content-Type-Options: nosniff' );
 	header( 'X-Frame-Options: SAMEORIGIN' );
 	header( 'X-XSS-Protection: 1;mode=block' );
 }
-add_action( 'send_headers', 'add_security_headers' );
+add_action( 'send_headers', 'add_security_headers' );*/
 
 
 // Agregar clases a los enlances de los posts next y back 
@@ -308,7 +308,7 @@ if ( function_exists( 'get_custom_field_value' ) ) get_custom_field_value( 'feat
 
 
 // Habilitar la compresión de imágenes
-add_filter('jpeg_quality', create_function('','return 48;'));
+// add_filter('jpeg_quality', create_function('','return 48;'));
 
 
 // Registrar las menúes de navegación
