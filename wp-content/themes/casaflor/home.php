@@ -42,9 +42,9 @@ if ( $query->have_posts() ) {
 		>
 <?php };?>
 		<?php //Móviles
-				if(wpmd_is_phone())
+				if( wpmd_is_phone() )
 				{
-					$attachID = (get_post_meta( $post->ID, 'custom_imagenrepetible', true));
+					$attachID = ( get_post_meta( $post->ID, 'custom_imagenrepetible', true) );
 					if ($attachID !== '')
 					{
 						foreach ($attachID as $item)
@@ -53,11 +53,14 @@ if ( $query->have_posts() ) {
 							$alt = get_post_meta($item, '_wp_attachment_image_alt', true);
 							$descripcion = get_post_field('post_content', $item);
 							echo '<img class="item" src="' . $imagen[0] . '"';
-							if (count($alt)) { echo ' alt="' . $alt . '"';
-						}
-						echo ' />';
+							// if (count($alt))
+							// {
+								echo ' alt="' . $alt . '"';
+							// }
+							echo ' />';
+						};
 					};
-				};};
+				};
 			
 				//Desktop.
 				if(wpmd_is_notphone())
@@ -71,11 +74,15 @@ if ( $query->have_posts() ) {
 							$alt = get_post_meta($item, '_wp_attachment_image_alt', true);
 							$descripcion = get_post_field('post_content', $item);
 							echo '<img src="' . $imagen[0] . '"';
-							if (count($alt)) { echo ' alt="' . $alt . '"';
-						}
-						echo ' />';
+							// if (count($alt))
+							// {
+							echo ' alt="' . $alt . '"';
+							// }
+							echo ' />';
+						};
 					};
-				};};?>
+				};?>
+
 		<div class="wrapper">
 			<div id="alt-caption"></div>
 			<div class="navegacion">

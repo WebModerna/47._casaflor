@@ -7,7 +7,7 @@
 get_header();?>
 <!-- Un lindo y bonito slideshow para deleitar -->
 	<div id="slideshow" class="cycle-slideshow slideshow wrapper" data-cycle-caption="#alt-caption" data-cycle-caption-template="{{alt}}">
-		<img src="<?php bloginfo('stylesheet_directory');?>/img/viendo_informacion-2400x900.jpg" alt="<?php _e('Qué hiciste?', 'casaflor');?>" />
+		<img src="<?php bloginfo('stylesheet_directory');?>/img/viendo_informacion-2400x900-3.jpg" alt="<?php _e('ERROR 404', 'casaflor');?>" />
 		<div id="alt-caption"></div>			
 	</div><!-- #slideshow -->
 </header>
@@ -32,14 +32,15 @@ get_header();?>
 				<div class="texto search">					
 					<article>
 						<h2><?php _e('Error 404', 'casaflor')?></h2>
-						<!-- <p> -->
 							<blockquote>
-								Lo que estás tratando de buscar no lo encontramos. O peor, no entendemos que querés hacer. Qué estás haciendo? Qué querés hacer? Hacé bien las cosas, por favor!
+								<?php _e('La página que estás buscando no existe. O el servidor no puede entender la petición.', 'casaflor')?>
 							</blockquote>
-						<!-- </p> -->
 					</article>
 				</div>
 			</div>
 		</div>
 	</section>
-<?php get_sidebar(); get_footer();?>
+<?php
+get_sidebar();
+get_footer();
+?>
